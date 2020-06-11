@@ -1,0 +1,8 @@
+2018-04-09 22:54:02,189 INFO [5] CampaignService - Start processing  : UpdateCampaign(Campaign camp)
+2018-04-09 22:54:02,230 ERROR [5] CampaignService - Error processing UpdateCampaign(Campaign camp): Campaign Id is null
+2018-04-09 23:11:10,553 INFO [9] CampaignService - Start processing  : CreateCampaign(Campaign camp)
+2018-04-09 23:11:10,722 ERROR [9] CampaignService - Error processing CreateCampaign(Campaign camp): Cannot insert the value NULL into column 'Target', table 'tawjeeh.dbo.tblCampaign'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+2018-04-09 23:13:34,027 INFO [10] CampaignService - Start processing  : CreateCampaign(Campaign camp)
+2018-04-09 23:13:34,161 ERROR [10] CampaignService - Error processing CreateCampaign(Campaign camp): Cannot insert the value NULL into column 'Budget', table 'tawjeeh.dbo.tblCampaign'; column does not allow nulls. INSERT fails.
+The statement has been terminated.

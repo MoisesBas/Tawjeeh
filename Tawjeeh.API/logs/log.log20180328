@@ -1,0 +1,4 @@
+2018-03-28 18:34:11,756 ERROR [5] ArticlesController - Object reference not set to an instance of an object.
+2018-03-28 18:37:28,892 ERROR [5] ArticlesController - Object reference not set to an instance of an object.
+2018-03-28 18:40:01,067 ERROR [5] ArticlesController - String was not recognized as a valid Boolean.
+2018-03-28 18:43:49,516 ERROR [5] ArticlesController - Object reference not set to an instance of an object.

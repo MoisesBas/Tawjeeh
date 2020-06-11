@@ -1,0 +1,8 @@
+2018-03-26 09:35:02,325 INFO [7] CenterService - Start processing  : CreateCenter(Centers center)
+2018-03-26 09:35:02,468 INFO [7] CenterService - End processing  : CreateCenter(Centers center)
+2018-03-26 17:58:20,927 INFO [5] UserService - Start processing  : AddUserToCenter(IList<User> users)
+2018-03-26 17:58:20,975 ERROR [5] UserService - Error processing AddUserToCenter(IList<User> users): Invalid Contact Type.,
+2018-03-26 17:58:51,804 INFO [12] UserService - Start processing  : AddUserToCenter(IList<User> users)
+2018-03-26 18:00:25,499 ERROR [12] UserService - Error processing AddUserToCenter(IList<User> users): This person is already exists and assigned to one center.,
+2018-03-26 18:02:50,216 INFO [12] UserService - Start processing  : AddUserToCenter(IList<User> users)
+2018-03-26 18:02:50,337 ERROR [12] UserService - Error processing AddUserToCenter(IList<User> users): This person is already exists and assigned to one center.,

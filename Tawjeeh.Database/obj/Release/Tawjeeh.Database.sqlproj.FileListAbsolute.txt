@@ -1,0 +1,9 @@
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\bin\Release\Tawjeeh.Database.dacpac
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\bin\Release\Tawjeeh.Database.dll
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\bin\Release\Tawjeeh.Database.pdb
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\obj\Release\Model.xml
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\obj\Release\refactor.xml
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\obj\Release\postdeploy.sql
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\obj\Release\predeploy.sql
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\obj\Release\Tawjeeh.Database.dll
+E:\Tawjeeh\Tawjeeh\Tawjeeh.Database\obj\Release\Tawjeeh.Database.pdb

@@ -1,0 +1,53 @@
+2018-03-21 16:15:35,633 INFO [10] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 16:16:53,903 ERROR [10] UtilityService - Error processing UserAccessBatchInsert: The type of column 'Menu' is not supported.  The type is 'Menu'
+2018-03-21 16:43:01,456 INFO [6] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:46:19,341 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:46:59,922 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:47:17,819 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:47:47,759 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:48:15,651 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:48:15,677 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:49:56,094 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:49:56,930 INFO [14] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:49:56,950 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:49:56,976 ERROR [14] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:50:09,854 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:50:09,878 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:56:04,726 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:56:05,601 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: DBNull value for parameter 'data' is not supported. Table-valued parameters cannot be DBNull.
+2018-03-21 21:56:18,325 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:56:18,412 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:56:33,424 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:57:24,963 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:57:48,309 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 21:57:48,379 ERROR [7] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 21:59:15,673 INFO [9] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 22:06:27,538 INFO [5] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 22:06:27,627 ERROR [5] UtilityService - Error processing UserAccessBatchInsert: Specified argument was out of the range of valid values.
+Parameter name: source
+2018-03-21 22:08:41,829 INFO [5] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 22:12:02,239 INFO [6] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 22:21:57,359 INFO [9] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 23:19:19,772 INFO [5] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 23:19:19,914 INFO [5] UtilityService - End processing  : UserAccessBatchInsert
+2018-03-21 23:20:02,244 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 23:20:02,256 INFO [7] UtilityService - End processing  : UserAccessBatchInsert
+2018-03-21 23:21:32,228 INFO [6] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 23:21:32,243 INFO [6] UtilityService - End processing  : UserAccessBatchInsert
+2018-03-21 23:28:17,827 INFO [7] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 23:28:17,986 INFO [7] UtilityService - End processing  : UserAccessBatchInsert
+2018-03-21 23:28:31,692 INFO [8] UtilityService - Start processing  : UserAccessBatchInsert
+2018-03-21 23:28:31,710 INFO [8] UtilityService - End processing  : UserAccessBatchInsert
+2018-03-21 23:28:54,790 INFO [8] UtilityService - Start processing  : GetMenusById
+2018-03-21 23:28:54,800 INFO [8] UtilityService - End processing  : GetMenusById
+2018-03-21 23:29:35,652 INFO [8] UserService - Start processing  : GetUserById
+2018-03-21 23:29:35,688 INFO [8] UserService - End processing  : GetUserById

@@ -1,0 +1,384 @@
+2018-04-30 13:32:25,266 INFO [1] Program - Update Campaign Status Service Started13:32:25.2646237
+2018-04-30 13:32:41,482 INFO [1] Program - Update Campaign Status Service Started13:32:41.4813345
+2018-04-30 13:32:54,480 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 13:32:58,069 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 13:32:58,076 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 13:32:59,896 ERROR [1] HostFactory - An exception occurred creating the host
+Topshelf.ServiceBuilderException: An exception occurred creating the service: InitiativeJobService ---> Ninject.ActivationException: Error activating IInitiativeJobService
+No matching bindings are available, and the type is not self-bindable.
+Activation path:
+  2) Injection of dependency IInitiativeJobService into parameter iniJobService of constructor of type InitiativeJobService
+  1) Request for InitiativeJobService
+
+Suggestions:
+  1) Ensure that you have defined a binding for IInitiativeJobService.
+  2) If the binding was defined in a module, ensure that the module has been loaded into the kernel.
+  3) Ensure you have not accidentally created more than one kernel.
+  4) If you are using constructor arguments, ensure that the parameter name matches the constructors parameter name.
+  5) If you are using automatic module loading, ensure the search path and filters are correct.
+
+   at Ninject.KernelBase.Resolve(IRequest request)
+   at Ninject.Planning.Targets.Target`1.GetValue(Type service, IContext parent)
+   at Ninject.Planning.Targets.Target`1.ResolveWithin(IContext parent)
+   at Ninject.Activation.Providers.StandardProvider.GetValue(IContext context, ITarget target)
+   at Ninject.Activation.Providers.StandardProvider.<>c__DisplayClass4.<Create>b__2(ITarget target)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Ninject.Activation.Providers.StandardProvider.Create(IContext context)
+   at Ninject.Activation.Context.ResolveInternal(Object scope)
+   at Ninject.Activation.Context.Resolve()
+   at Ninject.KernelBase.<>c__DisplayClass15.<Resolve>b__f(IBinding binding)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.<CastIterator>d__95`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Ninject.ResolutionExtensions.Get[T](IResolutionRoot root, IParameter[] parameters)
+   at Topshelf.Ninject.NinjectServiceConfiguratorExtensions.<ConstructUsingNinject>b__0[T](HostSettings serviceFactory)
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   --- End of inner exception stack trace ---
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   at Topshelf.Builders.RunBuilder.Build(ServiceBuilder serviceBuilder)
+   at Topshelf.HostConfigurators.HostConfiguratorImpl.CreateHost()
+   at Topshelf.HostFactory.New(Action`1 configureCallback)
+2018-04-30 13:34:13,505 INFO [1] Program - Update Campaign Status Service Started13:34:13.5021576
+2018-04-30 13:34:17,614 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 13:34:20,678 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 13:34:20,687 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 13:34:22,377 ERROR [1] HostFactory - An exception occurred creating the host
+Topshelf.ServiceBuilderException: An exception occurred creating the service: InitiativeJobService ---> Ninject.ActivationException: Error activating IInitiativeJobService
+No matching bindings are available, and the type is not self-bindable.
+Activation path:
+  2) Injection of dependency IInitiativeJobService into parameter iniJobService of constructor of type InitiativeJobService
+  1) Request for InitiativeJobService
+
+Suggestions:
+  1) Ensure that you have defined a binding for IInitiativeJobService.
+  2) If the binding was defined in a module, ensure that the module has been loaded into the kernel.
+  3) Ensure you have not accidentally created more than one kernel.
+  4) If you are using constructor arguments, ensure that the parameter name matches the constructors parameter name.
+  5) If you are using automatic module loading, ensure the search path and filters are correct.
+
+   at Ninject.KernelBase.Resolve(IRequest request)
+   at Ninject.Planning.Targets.Target`1.GetValue(Type service, IContext parent)
+   at Ninject.Planning.Targets.Target`1.ResolveWithin(IContext parent)
+   at Ninject.Activation.Providers.StandardProvider.GetValue(IContext context, ITarget target)
+   at Ninject.Activation.Providers.StandardProvider.<>c__DisplayClass4.<Create>b__2(ITarget target)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Ninject.Activation.Providers.StandardProvider.Create(IContext context)
+   at Ninject.Activation.Context.ResolveInternal(Object scope)
+   at Ninject.Activation.Context.Resolve()
+   at Ninject.KernelBase.<>c__DisplayClass15.<Resolve>b__f(IBinding binding)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.<CastIterator>d__95`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Ninject.ResolutionExtensions.Get[T](IResolutionRoot root, IParameter[] parameters)
+   at Topshelf.Ninject.NinjectServiceConfiguratorExtensions.<ConstructUsingNinject>b__0[T](HostSettings serviceFactory)
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   --- End of inner exception stack trace ---
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   at Topshelf.Builders.RunBuilder.Build(ServiceBuilder serviceBuilder)
+   at Topshelf.HostConfigurators.HostConfiguratorImpl.CreateHost()
+   at Topshelf.HostFactory.New(Action`1 configureCallback)
+2018-04-30 13:35:29,761 INFO [1] Program - Update Campaign Status Service Started13:35:29.7597036
+2018-04-30 13:35:35,651 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 13:36:11,083 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 13:36:11,092 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 13:36:12,643 ERROR [1] HostFactory - An exception occurred creating the host
+Topshelf.ServiceBuilderException: An exception occurred creating the service: InitiativeJobService ---> Ninject.ActivationException: Error activating IInitiativeJobService
+No matching bindings are available, and the type is not self-bindable.
+Activation path:
+  2) Injection of dependency IInitiativeJobService into parameter iniJobService of constructor of type InitiativeJobService
+  1) Request for InitiativeJobService
+
+Suggestions:
+  1) Ensure that you have defined a binding for IInitiativeJobService.
+  2) If the binding was defined in a module, ensure that the module has been loaded into the kernel.
+  3) Ensure you have not accidentally created more than one kernel.
+  4) If you are using constructor arguments, ensure that the parameter name matches the constructors parameter name.
+  5) If you are using automatic module loading, ensure the search path and filters are correct.
+
+   at Ninject.KernelBase.Resolve(IRequest request)
+   at Ninject.Planning.Targets.Target`1.GetValue(Type service, IContext parent)
+   at Ninject.Planning.Targets.Target`1.ResolveWithin(IContext parent)
+   at Ninject.Activation.Providers.StandardProvider.GetValue(IContext context, ITarget target)
+   at Ninject.Activation.Providers.StandardProvider.<>c__DisplayClass4.<Create>b__2(ITarget target)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Ninject.Activation.Providers.StandardProvider.Create(IContext context)
+   at Ninject.Activation.Context.ResolveInternal(Object scope)
+   at Ninject.Activation.Context.Resolve()
+   at Ninject.KernelBase.<>c__DisplayClass15.<Resolve>b__f(IBinding binding)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.<CastIterator>d__95`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Ninject.ResolutionExtensions.Get[T](IResolutionRoot root, IParameter[] parameters)
+   at Topshelf.Ninject.NinjectServiceConfiguratorExtensions.<ConstructUsingNinject>b__0[T](HostSettings serviceFactory)
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   --- End of inner exception stack trace ---
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   at Topshelf.Builders.RunBuilder.Build(ServiceBuilder serviceBuilder)
+   at Topshelf.HostConfigurators.HostConfiguratorImpl.CreateHost()
+   at Topshelf.HostFactory.New(Action`1 configureCallback)
+2018-04-30 13:42:31,792 INFO [1] Program - Update Campaign Status Service Started13:42:31.7913855
+2018-04-30 13:42:33,759 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 13:42:36,248 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 13:42:36,255 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 13:43:03,777 INFO [1] Program - Update Campaign Status Service Started13:43:03.7757667
+2018-04-30 13:43:13,322 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 13:43:16,095 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 13:43:16,102 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 13:43:18,140 ERROR [1] HostFactory - An exception occurred creating the host
+Topshelf.ServiceBuilderException: An exception occurred creating the service: InitiativeJobService ---> Ninject.ActivationException: Error activating IInitiativeCampaignStatus
+No matching bindings are available, and the type is not self-bindable.
+Activation path:
+  3) Injection of dependency IInitiativeCampaignStatus into parameter initiativeCampaignStatus of constructor of type InitiativeCampaignProcess
+  2) Injection of dependency IInitiativeJobService into parameter iniJobService of constructor of type InitiativeJobService
+  1) Request for InitiativeJobService
+
+Suggestions:
+  1) Ensure that you have defined a binding for IInitiativeCampaignStatus.
+  2) If the binding was defined in a module, ensure that the module has been loaded into the kernel.
+  3) Ensure you have not accidentally created more than one kernel.
+  4) If you are using constructor arguments, ensure that the parameter name matches the constructors parameter name.
+  5) If you are using automatic module loading, ensure the search path and filters are correct.
+
+   at Ninject.KernelBase.Resolve(IRequest request)
+   at Ninject.Planning.Targets.Target`1.GetValue(Type service, IContext parent)
+   at Ninject.Planning.Targets.Target`1.ResolveWithin(IContext parent)
+   at Ninject.Activation.Providers.StandardProvider.GetValue(IContext context, ITarget target)
+   at Ninject.Activation.Providers.StandardProvider.<>c__DisplayClass4.<Create>b__2(ITarget target)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Ninject.Activation.Providers.StandardProvider.Create(IContext context)
+   at Ninject.Activation.Context.ResolveInternal(Object scope)
+   at Ninject.Activation.Context.Resolve()
+   at Ninject.KernelBase.<>c__DisplayClass15.<Resolve>b__f(IBinding binding)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Ninject.Planning.Targets.Target`1.GetValue(Type service, IContext parent)
+   at Ninject.Planning.Targets.Target`1.ResolveWithin(IContext parent)
+   at Ninject.Activation.Providers.StandardProvider.GetValue(IContext context, ITarget target)
+   at Ninject.Activation.Providers.StandardProvider.<>c__DisplayClass4.<Create>b__2(ITarget target)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Ninject.Activation.Providers.StandardProvider.Create(IContext context)
+   at Ninject.Activation.Context.ResolveInternal(Object scope)
+   at Ninject.Activation.Context.Resolve()
+   at Ninject.KernelBase.<>c__DisplayClass15.<Resolve>b__f(IBinding binding)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.<CastIterator>d__95`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Ninject.ResolutionExtensions.Get[T](IResolutionRoot root, IParameter[] parameters)
+   at Topshelf.Ninject.NinjectServiceConfiguratorExtensions.<ConstructUsingNinject>b__0[T](HostSettings serviceFactory)
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   --- End of inner exception stack trace ---
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   at Topshelf.Builders.RunBuilder.Build(ServiceBuilder serviceBuilder)
+   at Topshelf.HostConfigurators.HostConfiguratorImpl.CreateHost()
+   at Topshelf.HostFactory.New(Action`1 configureCallback)
+2018-04-30 13:43:35,527 INFO [1] Program - Update Campaign Status Service Started13:43:35.5259296
+2018-04-30 13:43:37,468 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 13:43:40,036 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 13:43:40,043 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 13:43:41,528 ERROR [1] HostFactory - An exception occurred creating the host
+Topshelf.ServiceBuilderException: An exception occurred creating the service: InitiativeJobService ---> Ninject.ActivationException: Error activating IInitiativeCampaignStatus
+No matching bindings are available, and the type is not self-bindable.
+Activation path:
+  3) Injection of dependency IInitiativeCampaignStatus into parameter initiativeCampaignStatus of constructor of type InitiativeCampaignProcess
+  2) Injection of dependency IInitiativeJobService into parameter iniJobService of constructor of type InitiativeJobService
+  1) Request for InitiativeJobService
+
+Suggestions:
+  1) Ensure that you have defined a binding for IInitiativeCampaignStatus.
+  2) If the binding was defined in a module, ensure that the module has been loaded into the kernel.
+  3) Ensure you have not accidentally created more than one kernel.
+  4) If you are using constructor arguments, ensure that the parameter name matches the constructors parameter name.
+  5) If you are using automatic module loading, ensure the search path and filters are correct.
+
+   at Ninject.KernelBase.Resolve(IRequest request)
+   at Ninject.Planning.Targets.Target`1.GetValue(Type service, IContext parent)
+   at Ninject.Planning.Targets.Target`1.ResolveWithin(IContext parent)
+   at Ninject.Activation.Providers.StandardProvider.GetValue(IContext context, ITarget target)
+   at Ninject.Activation.Providers.StandardProvider.<>c__DisplayClass4.<Create>b__2(ITarget target)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Ninject.Activation.Providers.StandardProvider.Create(IContext context)
+   at Ninject.Activation.Context.ResolveInternal(Object scope)
+   at Ninject.Activation.Context.Resolve()
+   at Ninject.KernelBase.<>c__DisplayClass15.<Resolve>b__f(IBinding binding)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Ninject.Planning.Targets.Target`1.GetValue(Type service, IContext parent)
+   at Ninject.Planning.Targets.Target`1.ResolveWithin(IContext parent)
+   at Ninject.Activation.Providers.StandardProvider.GetValue(IContext context, ITarget target)
+   at Ninject.Activation.Providers.StandardProvider.<>c__DisplayClass4.<Create>b__2(ITarget target)
+   at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at Ninject.Activation.Providers.StandardProvider.Create(IContext context)
+   at Ninject.Activation.Context.ResolveInternal(Object scope)
+   at Ninject.Activation.Context.Resolve()
+   at Ninject.KernelBase.<>c__DisplayClass15.<Resolve>b__f(IBinding binding)
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.<CastIterator>d__95`1.MoveNext()
+   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at Ninject.ResolutionExtensions.Get[T](IResolutionRoot root, IParameter[] parameters)
+   at Topshelf.Ninject.NinjectServiceConfiguratorExtensions.<ConstructUsingNinject>b__0[T](HostSettings serviceFactory)
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   --- End of inner exception stack trace ---
+   at Topshelf.Builders.DelegateServiceBuilder`1.Build(HostSettings settings)
+   at Topshelf.Builders.RunBuilder.Build(ServiceBuilder serviceBuilder)
+   at Topshelf.HostConfigurators.HostConfiguratorImpl.CreateHost()
+   at Topshelf.HostFactory.New(Action`1 configureCallback)
+2018-04-30 15:47:24,540 INFO [1] Program - Update Campaign Status Service Started15:47:24.5392339
+2018-04-30 15:47:27,503 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:47:30,037 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 15:47:30,046 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:47:36,493 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:48:08,425 INFO [1] Program - Update Campaign Status Service Started15:48:08.4235591
+2018-04-30 15:48:17,238 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:48:28,831 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 15:48:28,837 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:48:35,587 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:50:29,631 INFO [1] Program - Update Campaign Status Service Started15:50:29.6293751
+2018-04-30 15:50:31,792 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:50:34,455 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 15:50:34,462 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:50:38,102 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:51:02,617 INFO [1] Program - Update Campaign Status Service Started15:51:02.6152846
+2018-04-30 15:51:06,897 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:51:10,045 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 15:51:10,053 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:51:13,907 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:52:06,536 INFO [1] Program - Update Campaign Status Service Started15:52:06.5344807
+2018-04-30 15:52:06,599 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:52:06,671 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 15:52:06,680 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:52:06,829 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:52:12,272 INFO [1] Program - Update Campaign Status Service Started15:52:12.2714931
+2018-04-30 15:52:12,322 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:52:12,379 INFO [1] HostFactory - Configuration Result:
+[Success] Name Tawjeeh.SMSBulkSending
+[Success] ServiceName Tawjeeh.SMSBulkSending
+2018-04-30 15:52:12,388 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:52:12,502 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:52:31,365 INFO [1] Program - Update Campaign Status Service Started15:52:31.3633921
+2018-04-30 15:52:31,417 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:52:31,461 INFO [1] HostFactory - Configuration Result:
+[Success] Name Initiative Campaign Service
+[Success] Description Process initiative for campaign
+[Success] ServiceName Initiative Campaign Service
+2018-04-30 15:52:31,468 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:52:31,560 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:52:37,413 INFO [1] Program - Update Campaign Status Service Started15:52:37.4110341
+2018-04-30 15:52:37,486 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:52:37,561 INFO [1] HostFactory - Configuration Result:
+[Success] Name Initiative Campaign Service
+[Success] Description Process initiative for campaign
+[Success] ServiceName Initiative Campaign Service
+2018-04-30 15:52:37,574 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:52:37,731 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:53:06,243 INFO [1] Program - Update Campaign Status Service Started15:53:06.2425344
+2018-04-30 15:53:06,327 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:53:06,393 INFO [1] HostFactory - Configuration Result:
+[Success] Name Initiative Campaign Service
+[Success] Description Process initiative for campaign
+[Success] ServiceName Initiative Campaign Service
+2018-04-30 15:53:06,405 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:53:06,576 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()
+2018-04-30 15:53:11,530 INFO [1] Program - Update Campaign Status Service Started15:53:11.5291378
+2018-04-30 15:53:11,584 INFO [1] HostConfiguratorExtensions - [Topshelf.Ninject] Service configured to construct using Ninject.
+2018-04-30 15:53:11,660 INFO [1] HostFactory - Configuration Result:
+[Success] Name Initiative Campaign Service
+[Success] Description Process initiative for campaign
+[Success] ServiceName Initiative Campaign Service
+2018-04-30 15:53:11,670 INFO [1] HostConfiguratorImpl - Topshelf v4.0.0.0, .NET Framework v4.0.30319.42000
+2018-04-30 15:53:11,798 ERROR [1] ConsoleRunHost - An exception occurred
+System.IO.IOException: The handle is invalid.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.__Error.WinIOError()
+   at System.Console.set_Title(String value)
+   at Topshelf.Hosts.ConsoleRunHost.Run()

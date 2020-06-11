@@ -1,0 +1,4 @@
+2018-04-17 16:16:40,464 INFO [8] UserService - Start processing  : RegisterUser(User user)
+2018-04-17 16:16:40,598 INFO [8] UserService - End processing  : RegisterUser(User user)
+2018-04-17 16:30:04,382 INFO [10] UserService - Start processing  : RegisterUser(User user)
+2018-04-17 16:31:33,689 INFO [10] UserService - End processing  : RegisterUser(User user)

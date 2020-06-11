@@ -1,0 +1,2 @@
+2018-04-28 11:41:54,156 INFO [8] CampaignService - Start processing  : CreateCampaign(Campaign camp)
+2018-04-28 11:42:38,531 INFO [8] CampaignService - End processing  : CreateCampaign(Campaign camp)

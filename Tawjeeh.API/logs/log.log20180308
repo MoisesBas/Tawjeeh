@@ -1,0 +1,73 @@
+2018-03-08 15:47:49,409 INFO [5] DashboardController - Log Error
+2018-03-08 16:26:47,008 INFO [5] CommentService - Processing GetAllComments.,
+2018-03-08 16:26:47,055 ERROR [5] CommentService - Error Processing GetAllComments.
+2018-03-08 16:49:47,157 INFO [7] CommentService - Adding Commnets: {
+  "CommentID": 0,
+  "Comments": "testing",
+  "CreatedOn": "2018-03-08T12:49:18.323Z",
+  "CreatedBy": 1,
+  "UpdatedOn": "2018-03-08T12:49:18.323Z",
+  "UpdatedBy": 2
+}
+2018-03-08 16:50:15,896 ERROR [7] CommentService - Error in inserting Comments:{
+  "CommentID": 0,
+  "Comments": "testing",
+  "CreatedOn": "2018-03-08T12:49:18.323Z",
+  "CreatedBy": 1,
+  "UpdatedOn": "2018-03-08T12:49:18.323Z",
+  "UpdatedBy": 2
+}
+2018-03-08 21:31:15,541 INFO [6] CommentService - Start processing  : GetAllComments
+2018-03-08 21:31:31,346 INFO [6] CommentService - End processing  : GetAllComments
+2018-03-08 21:39:24,710 INFO [8] CommentService - Start processing Add Comments : {
+  "CommentID": 0,
+  "Comments": "testing",
+  "CreatedOn": "2018-03-08T17:38:11.03Z",
+  "CreatedBy": 1,
+  "UpdatedOn": "2018-03-08T17:38:11.03Z",
+  "UpdatedBy": 1
+}
+2018-03-08 21:39:24,913 ERROR [8] CommentService - Error processing Add Comments: An error occurred while updating the entries. See the inner exception for details.
+2018-03-08 21:41:58,164 INFO [7] CommentService - Start processing Add Comments : {
+  "CommentID": 0,
+  "Comments": "string",
+  "CreatedOn": "2018-03-08T17:41:37.674Z",
+  "CreatedBy": 0,
+  "UpdatedOn": "2018-03-08T17:41:37.674Z",
+  "UpdatedBy": 0
+}
+2018-03-08 21:41:58,442 ERROR [7] CommentService - Error processing Add Comments: System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert explicit value for identity column in table 'Comments' when IDENTITY_INSERT is set to OFF.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.Internal.InterceptableDbCommand.ExecuteNonQuery()
+   at System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- End of inner exception stack trace ---
+   at System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   at System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   at System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   at System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   at System.Data.Entity.Internal.InternalContext.SaveChanges()
+2018-03-08 21:58:18,830 INFO [6] CompanyService - Start processing  : GetAllActiveCompanies
+2018-03-08 21:58:19,310 INFO [6] CompanyService - End processing  : GetAllActiveCompanies
+2018-03-08 22:32:54,927 INFO [13] CompanyService - Start processing  : GetCompaniesByEventID
+2018-03-08 22:32:55,341 INFO [13] CompanyService - End processing  : GetCompaniesByEventID
+2018-03-08 22:33:08,262 INFO [16] CompanyService - Start processing  : GetCompaniesByEventID
+2018-03-08 22:33:08,271 INFO [16] CompanyService - End processing  : GetCompaniesByEventID

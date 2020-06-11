@@ -1,0 +1,48 @@
+2018-03-18 15:48:03,753 INFO [10] UserService - Start processing  : GetUserById
+2018-03-18 15:48:03,897 ERROR [10] UserService - Error processing GetUserById: Incorrect syntax near the keyword 'WHERE'.
+2018-03-18 15:52:26,323 INFO [11] UserService - Start processing  : GetUserById
+2018-03-18 15:52:26,353 ERROR [11] UserService - Error processing GetUserById: Incorrect syntax near the keyword 'WHERE'.
+2018-03-18 15:54:19,373 INFO [9] UserService - Start processing  : GetUserById
+2018-03-18 15:54:19,482 INFO [9] UserService - End processing  : GetUserById
+2018-03-18 15:56:01,274 INFO [10] UserService - Start processing  : Create User
+2018-03-18 15:56:01,308 ERROR [10] UserService - Error processing Create User: Password Generated is invalid., Please contact system administrator.
+2018-03-18 15:56:28,617 INFO [10] UserService - Start processing  : Create User
+2018-03-18 15:56:28,696 INFO [10] UserService - End processing  : Create User
+2018-03-18 16:01:35,900 INFO [11] UserService - Start processing  : GetUserById
+2018-03-18 16:01:36,012 INFO [11] UserService - End processing  : GetUserById
+2018-03-18 17:55:20,225 INFO [8] UserService - Start processing  : Create User
+2018-03-18 17:55:48,248 INFO [8] UserService - End processing  : Create User
+2018-03-18 18:00:17,583 INFO [8] UserService - Start processing  : Create User
+2018-03-18 21:00:00,732 INFO [9] UserService - Start processing  : GetUserById
+2018-03-18 21:00:00,829 INFO [9] UserService - End processing  : GetUserById
+2018-03-18 21:15:24,698 INFO [15] UserService - Start processing  : Create User
+2018-03-18 21:17:03,118 INFO [15] UserService - End processing  : Create User
+2018-03-18 21:17:16,160 INFO [14] UserService - Start processing  : Create User
+2018-03-18 21:28:08,805 INFO [6] UserService - Start processing  : Create User
+2018-03-18 21:59:02,033 INFO [5] UserService - Start processing  : Create User
+2018-03-18 21:59:02,170 ERROR [5] UserService - Error processing Create User: User Name is already exists.,
+2018-03-18 21:59:53,787 INFO [5] UserService - Start processing  : Create User
+2018-03-18 21:59:53,828 ERROR [5] UserService - Error processing Create User: Password Generated is invalid., Please contact system administrator.
+2018-03-18 22:00:34,448 INFO [5] UserService - Start processing  : Create User
+2018-03-18 22:01:12,147 INFO [5] UserService - End processing  : Create User
+2018-03-18 22:08:11,778 INFO [9] UserService - Start processing  : Create User
+2018-03-18 22:08:39,042 INFO [9] UserService - End processing  : Create User
+2018-03-18 22:09:19,151 INFO [14] UserService - Start processing  : Create User
+2018-03-18 22:10:35,781 INFO [14] UserService - End processing  : Create User
+2018-03-18 22:12:45,514 INFO [9] UserService - Start processing  : Create User
+2018-03-18 22:12:45,539 ERROR [9] UserService - Error processing Create User: Password Generated is invalid., Please contact system administrator.
+2018-03-18 22:12:51,760 INFO [9] UserService - Start processing  : Create User
+2018-03-18 22:15:16,096 INFO [9] UserService - End processing  : Create User
+2018-03-18 22:15:37,413 INFO [24] UserService - Start processing  : Create User
+2018-03-18 22:15:42,106 INFO [24] UserService - End processing  : Create User
+2018-03-18 22:21:04,004 INFO [6] UserService - Start processing  : Create User
+2018-03-18 22:21:08,172 INFO [6] UserService - End processing  : Create User
+2018-03-18 22:24:40,227 INFO [7] UserService - Start processing  : Create User
+2018-03-18 22:24:44,914 INFO [7] UserService - End processing  : Create User
+2018-03-18 22:26:09,968 INFO [6] UserService - Start processing  : Create User
+2018-03-18 22:26:17,371 INFO [6] UserService - End processing  : Create User
+2018-03-18 22:35:09,376 INFO [7] UserService - Start processing  : Create User
+2018-03-18 22:37:34,804 INFO [7] UserService - Start processing  : Create User
+2018-03-18 22:37:34,917 ERROR [7] UserService - Error processing Create User: User Name is already exists.,
+2018-03-18 22:37:47,751 INFO [6] UserService - Start processing  : Create User
+2018-03-18 22:38:23,810 INFO [6] UserService - End processing  : Create User

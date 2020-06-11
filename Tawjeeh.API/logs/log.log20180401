@@ -1,0 +1,8 @@
+2018-04-01 12:27:44,041 INFO [5] UserService - Start processing  : Create User
+2018-04-01 12:27:44,126 INFO [5] UserService - End processing  : Create User
+2018-04-01 14:05:34,556 INFO [5] UserService - Start processing  : Create User
+2018-04-01 14:05:34,599 ERROR [5] UserService - Error processing Create User: StartIndex cannot be less than zero.
+Parameter name: startIndex
+2018-04-01 14:06:25,957 INFO [5] UserService - Start processing  : Create User
+2018-04-01 14:11:17,385 INFO [5] UserService - Start processing  : Create User
+2018-04-01 14:11:27,863 INFO [5] UserService - End processing  : Create User

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89FD77C3-BE90-4406-BC46-3485167D60E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tawjeeh.EntityFramework</RootNamespace>
+    <AssemblyName>Tawjeeh.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.2\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.2.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.DynamicFilters, Version=3.0.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.DynamicFilters.3.0.1\lib\net40\EntityFramework.DynamicFilters.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Ioc.Modules, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ioc.Modules.1.2.1\lib\net45\Ioc.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="Ioc.Modules.Ninject, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ioc.Modules.Ninject.1.1.3\lib\net45\Ioc.Modules.Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy, Version=1.0.4.16035, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinFu.DynamicProxy.OfficialRelease.1.0.5\lib\net\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="LinqKit, Version=1.1.15.0, Culture=neutral, PublicKeyToken=bc217f8844052a91, processorArchitecture=MSIL">
+      <HintPath>..\packages\LinqKit.1.1.15\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Interception, Version=3.3.3.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Interception.3.3.3\lib\net45\Ninject.Extensions.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Interception.LinFu, Version=3.3.3.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Interception.Linfu.3.3.3\lib\net45\Ninject.Extensions.Interception.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helper\CreatedAndModifiedDateInterceptor.cs" />
+    <Compile Include="Helper\CustomRemoveAllItem.cs" />
+    <Compile Include="Helper\TawjeehConfiguration.cs" />
+    <Compile Include="Helper\ExpressionBuilder.cs" />
+    <Compile Include="Helper\ExpressionExtensions.cs" />
+    <Compile Include="Helper\Extensions.cs" />
+    <Compile Include="Helper\IQuery.cs" />
+    <Compile Include="Helper\OperationType.cs" />
+    <Compile Include="Helper\Query.cs" />
+    <Compile Include="Helper\RecompileDbCommandInterceptor.cs" />
+    <Compile Include="Helper\SoftDeleteInterceptor.cs" />
+    <Compile Include="Interface\IArticleMultimediaRepository.cs" />
+    <Compile Include="Interface\IArticleRepository.cs" />
+    <Compile Include="Interface\IArticleTransRepository.cs" />
+    <Compile Include="Interface\ICampaignDetailsRepository.cs" />
+    <Compile Include="Interface\ICampaignDocumentRepository.cs" />
+    <Compile Include="Interface\ICampaignRepository.cs" />
+    <Compile Include="Interface\ICenterRepository.cs" />
+    <Compile Include="Interface\ICenterTransRepository.cs" />
+    <Compile Include="Interface\IContactRepository.cs" />
+    <Compile Include="Interface\IContactTypeRepository.cs" />
+    <Compile Include="Interface\ICountryRepository.cs" />
+    <Compile Include="Interface\IDecisionMultimediaRepository.cs" />
+    <Compile Include="Interface\IDecisionRepository.cs" />
+    <Compile Include="Interface\IDecisionTransRepository.cs" />
+    <Compile Include="Interface\IDisposedTracker.cs" />
+    <Compile Include="Interface\IEmiratesRepository.cs" />
+    <Compile Include="Interface\IGoalRepository.cs" />
+    <Compile Include="Interface\IInitiativeCampaignRepository.cs" />
+    <Compile Include="Interface\IInitiativeRepository.cs" />
+    <Compile Include="Interface\IInitiativeTypeRepository.cs" />
+    <Compile Include="Interface\ILawRepository.cs" />
+    <Compile Include="Interface\ILawTransRepository.cs" />
+    <Compile Include="Interface\IMultimediaTypeRepository.cs" />
+    <Compile Include="Interface\IRepositoryFactory.cs" />
+    <Compile Include="Interface\IUserRepository.cs" />
+    <Compile Include="Interface\IUserTypeRepository.cs" />
+    <Compile Include="Interface\IUtilityRepository.cs" />
+    <Compile Include="Mappings\CampaignDetailMap.cs" />
+    <Compile Include="Mappings\CampaignDocumentMap.cs" />
+    <Compile Include="Mappings\CampaignMap.cs" />
+    <Compile Include="Mappings\CenterTransMap.cs" />
+    <Compile Include="Mappings\ContactTypeMap.cs" />
+    <Compile Include="Mappings\CountryMap.cs" />
+    <Compile Include="Mappings\DecisionMultimediaMap.cs" />
+    <Compile Include="Mappings\ArticleMap.cs" />
+    <Compile Include="Mappings\ArticleMultimediaMap.cs" />
+    <Compile Include="Mappings\ArticleTransMapcs.cs" />
+    <Compile Include="Mappings\CenterContactsMap.cs" />
+    <Compile Include="Mappings\CentersMap.cs" />
+    <Compile Include="Mappings\DecisionMap.cs" />
+    <Compile Include="Mappings\DecisionTransMap.cs" />
+    <Compile Include="Mappings\EmiratesMap.cs" />
+    <Compile Include="Mappings\GoalMap.cs" />
+    <Compile Include="Mappings\InitiativeCampaignMap.cs" />
+    <Compile Include="Mappings\InitiativeMap.cs" />
+    <Compile Include="Mappings\InitiativeTypeMap.cs" />
+    <Compile Include="Mappings\LawMap.cs" />
+    <Compile Include="Mappings\LawTransMap.cs" />
+    <Compile Include="Mappings\MultimediaTypeMap.cs" />
+    <Compile Include="Mappings\UserMap.cs" />
+    <Compile Include="Mappings\UserTypeMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\ArticleMultimediaRepository.cs" />
+    <Compile Include="Repository\ArticleRepository.cs" />
+    <Compile Include="Repository\ArticleTransRepository.cs" />
+    <Compile Include="Repository\CampaignDetailsRepository.cs" />
+    <Compile Include="Repository\CampaignDocumentRepository.cs" />
+    <Compile Include="Repository\CampaignRepository.cs" />
+    <Compile Include="Repository\CenterContactRepository.cs" />
+    <Compile Include="Repository\CenterRepository.cs" />
+    <Compile Include="Repository\CenterTransRepository.cs" />
+    <Compile Include="Repository\ContactTypeRepository.cs" />
+    <Compile Include="Repository\CountryRepository.cs" />
+    <Compile Include="Repository\DecisionMultimediaRepository.cs" />
+    <Compile Include="Repository\DecisionRepository.cs" />
+    <Compile Include="Repository\DecisionTransRepository.cs" />
+    <Compile Include="Repository\EmiratesRepository.cs" />
+    <Compile Include="Repository\GoalRepository.cs" />
+    <Compile Include="Repository\InitiativeCampaignRepository.cs" />
+    <Compile Include="Repository\InitiativeRepository.cs" />
+    <Compile Include="Repository\InitiativeTypeRepository.cs" />
+    <Compile Include="Repository\LawRepository.cs" />
+    <Compile Include="Repository\LawTransRepository.cs" />
+    <Compile Include="Repository\MultimediaTypeRepository.cs" />
+    <Compile Include="Repository\OperationStatus.cs" />
+    <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="Repository\RepositoryFactory.cs" />
+    <Compile Include="Repository\TawjeehContext.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Repository\UserTypeRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tawjeeh.Infrastructure\Tawjeeh.Infrastructure.csproj">
+      <Project>{BA013471-3F0F-4529-939B-F81E0FDF939C}</Project>
+      <Name>Tawjeeh.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TawjeehEntityModel\Tawjeeh.EntityModel.csproj">
+      <Project>{4c7f6592-33fc-45eb-ba16-8ee7de1e4707}</Project>
+      <Name>Tawjeeh.EntityModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,3 @@
+G:\backuptawjeeh\API\Tawjeeh.Notification\obj\Release\Tawjeeh.Notification.exe.config
+G:\backuptawjeeh\API\Tawjeeh.Notification\obj\Release\Tawjeeh.Notification.csproj.CoreCompileInputs.cache
+G:\backuptawjeeh\API\Tawjeeh.Notification\obj\Release\Tawjeeh.Notification.csprojResolveAssemblyReference.cache

@@ -1,0 +1,4 @@
+2018-04-18 12:46:59,674 INFO [10] InitiativeService - Start processing  : CreateInitiative(Initiative initiative)
+2018-04-18 12:47:42,109 INFO [10] InitiativeService - End processing  : CreateInitiative(Initiative initiative)
+2018-04-18 13:07:09,903 INFO [6] InitiativeService - Start processing  : CreateInitiative(Initiative initiative)
+2018-04-18 13:07:10,031 INFO [6] InitiativeService - End processing  : CreateInitiative(Initiative initiative)

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{13CF37A4-33A4-439B-B8D9-14598B644C78}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tawjeeh.Entities</RootNamespace>
+    <AssemblyName>Tawjeeh.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Demo|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Demo\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper.Contrib, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.Contrib.1.50.4\lib\net451\Dapper.Contrib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MiniProfiler, Version=3.2.0.157, Culture=neutral, PublicKeyToken=b44f9351044011a3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MiniProfiler.3.2.0.157\lib\net40\MiniProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Article.cs" />
+    <Compile Include="ArticleMultimedia.cs" />
+    <Compile Include="ArticleMultimediaAuditTrail.cs" />
+    <Compile Include="ArticleTrans.cs" />
+    <Compile Include="Campaign.cs" />
+    <Compile Include="CampaignDetails.cs" />
+    <Compile Include="CampaignDocument.cs" />
+    <Compile Include="CampaignMultimedia.cs" />
+    <Compile Include="CenterContacts.cs" />
+    <Compile Include="CenterTrans.cs" />
+    <Compile Include="Centers.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="ContactType.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="Dashboard.cs" />
+    <Compile Include="Decision.cs" />
+    <Compile Include="DecisionMultimedia.cs" />
+    <Compile Include="DecisionTrans.cs" />
+    <Compile Include="Emirates.cs" />
+    <Compile Include="GlobalEnum.cs" />
+    <Compile Include="Goal.cs" />
+    <Compile Include="Initiative.cs" />
+    <Compile Include="InitiativeCampaign.cs" />
+    <Compile Include="InitiativeType.cs" />
+    <Compile Include="Lang.cs" />
+    <Compile Include="LawTrans.cs" />
+    <Compile Include="Law.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="MenuAccess.cs" />
+    <Compile Include="MobileSearch.cs" />
+    <Compile Include="MultimediaTopVideo.cs" />
+    <Compile Include="MultimediaType.cs" />
+    <Compile Include="Password\PasswordSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PushNotificationLogs.cs" />
+    <Compile Include="ResetPass.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserResult.cs" />
+    <Compile Include="UserType.cs" />
+    <Compile Include="UserTypeTrans.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

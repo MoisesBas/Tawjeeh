@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "956333240770",
+    "firebase_url": "https://tawjeeh-907d2.firebaseio.com",
+    "project_id": "tawjeeh-907d2",
+    "storage_bucket": "tawjeeh-907d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:956333240770:android:637866c4648c0ca1",
+        "android_client_info": {
+          "package_name": "ae.gov.mol.tawjeeh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "956333240770-60ksedfiirkj2gml1jp12b1cajsqqvb6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_aa01h2SVr9JlIq89S3YyX3gfHFZYPQk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

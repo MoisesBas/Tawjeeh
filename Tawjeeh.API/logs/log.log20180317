@@ -1,0 +1,22 @@
+2018-03-17 17:56:12,861 INFO [10] UserService - Start processing  : Create User
+2018-03-17 17:57:37,383 ERROR [10] UserService - Error processing Create User: Password Generated is invalid., Please contact system administrator.
+2018-03-17 17:57:47,916 INFO [10] UserService - Start processing  : Create User
+2018-03-17 17:59:04,038 ERROR [10] UserService - Error processing Create User: Password Generated is invalid., Please contact system administrator.
+2018-03-17 18:00:25,864 INFO [9] UserService - Start processing  : Create User
+2018-03-17 18:01:01,403 INFO [9] UserService - End processing  : Create User
+2018-03-17 20:37:52,402 INFO [5] UserService - Start processing  : Create User
+2018-03-17 20:38:20,546 INFO [5] UserService - End processing  : Create User
+2018-03-17 21:40:28,776 INFO [11] UserService - Start processing  : GetUserbyCredential
+2018-03-17 21:40:58,901 ERROR [11] UserService - Error processing GetUserbyCredential: Method not found: '!!0 Dapper.SqlMapper.QueryFirst(System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, System.Nullable`1<Int32>, System.Nullable`1<System.Data.CommandType>)'.
+2018-03-17 21:48:31,742 INFO [11] UserService - Start processing  : GetUserbyCredential
+2018-03-17 21:48:45,643 ERROR [11] UserService - Error processing GetUserbyCredential: Method not found: '!!0 Dapper.SqlMapper.QueryFirstOrDefault(System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, System.Nullable`1<Int32>, System.Nullable`1<System.Data.CommandType>)'.
+2018-03-17 22:00:22,453 INFO [9] UserService - Start processing  : GetUserbyCredential
+2018-03-17 22:03:08,735 ERROR [9] UserService - Error processing GetUserbyCredential: Method not found: '!!0 Dapper.SqlMapper.QueryFirstOrDefault(System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, System.Nullable`1<Int32>, System.Nullable`1<System.Data.CommandType>)'.
+2018-03-17 22:06:19,601 INFO [12] UserService - Start processing  : GetUserbyCredential
+2018-03-17 22:15:47,425 INFO [10] UserService - Start processing  : GetUserbyCredential
+2018-03-17 22:21:30,218 INFO [7] UserService - Start processing  : GetUserbyCredential
+2018-03-17 22:23:09,160 INFO [9] UserService - Start processing  : GetUserbyCredential
+2018-03-17 22:25:12,393 INFO [9] UserService - Start processing  : GetUserbyCredential
+2018-03-17 22:25:24,818 ERROR [9] UserService - Error processing GetUserbyCredential: Method not found: 'System.Object Dapper.SqlMapper.QueryFirstOrDefault(System.Data.IDbConnection, System.String, System.Object, System.Data.IDbTransaction, System.Nullable`1<Int32>, System.Nullable`1<System.Data.CommandType>)'.
+2018-03-17 22:29:31,500 INFO [9] UserService - Start processing  : GetUserbyCredential
+2018-03-17 22:29:32,783 INFO [9] UserService - End processing  : GetUserbyCredential

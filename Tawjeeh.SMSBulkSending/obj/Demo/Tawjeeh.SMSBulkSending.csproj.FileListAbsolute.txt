@@ -1,0 +1,6 @@
+G:\repos\Tawjeeh\src\API\Tawjeeh.SMSBulkSending\bin\Demo\Tawjeeh.SMSBulkSending.exe.config
+G:\repos\Tawjeeh\src\API\Tawjeeh.SMSBulkSending\bin\Demo\Tawjeeh.SMSBulkSending.exe
+G:\repos\Tawjeeh\src\API\Tawjeeh.SMSBulkSending\bin\Demo\Tawjeeh.SMSBulkSending.pdb
+G:\repos\Tawjeeh\src\API\Tawjeeh.SMSBulkSending\obj\Demo\Tawjeeh.SMSBulkSending.csproj.CoreCompileInputs.cache
+G:\repos\Tawjeeh\src\API\Tawjeeh.SMSBulkSending\obj\Demo\Tawjeeh.SMSBulkSending.exe
+G:\repos\Tawjeeh\src\API\Tawjeeh.SMSBulkSending\obj\Demo\Tawjeeh.SMSBulkSending.pdb

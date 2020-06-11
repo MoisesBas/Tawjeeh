@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E950D999-E7A5-4855-8748-10C4B15DFAB4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Tawjeeh.DbMigration</RootNamespace>
+    <AssemblyName>Tawjeeh.DbMigration</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FluentMigrator, Version=1.6.2.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentMigrator.1.6.2\lib\40\FluentMigrator.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentMigrator.Runner, Version=1.6.2.0, Culture=neutral, PublicKeyToken=aacfc7de5acabf05, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentMigrator.Runner.1.6.2\lib\40\FluentMigrator.Runner.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="12_MultimediaCampaignDashboard.cs" />
+    <Compile Include="13_CompanyMigrations.cs" />
+    <Compile Include="14_InitiativeCampaignFileUpload.cs" />
+    <Compile Include="1_EmptyDatabase.cs" />
+    <Compile Include="2_CreateTable.cs" />
+    <Compile Include="7_CreateCampaignAndGoal.cs" />
+    <Compile Include="3_CampaignInitiative.cs" />
+    <Compile Include="4_DecisionUpgrade.cs" />
+    <Compile Include="5_ArticleDecisionTranslateMigration.cs" />
+    <Compile Include="6_LawTranslationMigration.cs" />
+    <Compile Include="8_CountryMigration.cs" />
+    <Compile Include="9_RegisterUserMigration.cs" />
+    <Compile Include="10_RenameColumnCampaignDocument.cs" />
+    <Compile Include="11_GetMultimediaCampaign.cs" />
+    <Compile Include="15_Dashboard05052018.cs" />
+    <Compile Include="DbTawjeehMigrationAttribute.cs" />
+    <Compile Include="DbUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Views\SearchMobile_04142018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\Tawjeeh_StoredProcedure04142018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblAccessControls.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblArticle.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblArticleMultimedia.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblArticleTrans.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblCampaign.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblCampaignDetails.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblCampaignDocument.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblCenterContacts.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblCenters.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblCenterTrans.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblContactType.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblDecision.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblDecisionMultimedia.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblDecisionTrans.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblEmailSMSTemplate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblEmirates.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblEmiratesTrans.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblGoal.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblInitiative.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblInitiativeCampaign.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblInitiativeType.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblLang.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblLaw.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblLawTrans.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblMenu.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblMultimediaType.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblUser.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblUserType.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\tables_04122018\Create_tblUserTypeTrans.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\ArticleMigrateData15042018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\DecisionMigrateData15042018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\LawTransMigrateData15042018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\CountryMigrateData18042018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\spGetMultimediaCampaign.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\Dashboard28042018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\spGetMultimediaCampaign28042018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\Dashboard.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Stored_Procedure\Dashboard05052018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <Content Include="Scripts\Stored_Procedure\spDeleteInitiative.sql" />
+    <EmbeddedResource Include="Scripts\Stored_Procedure\spDeleteInitiative05022018.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
+</Project>

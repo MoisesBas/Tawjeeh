@@ -1,0 +1,9 @@
+2018-03-31 13:14:07,291 INFO [20] UserService - Start processing  : AddUserToCenter(IList<User> users)
+2018-03-31 13:14:21,168 INFO [20] UserService - End processing  : AddUserToCenter(IList<User> users)
+2018-03-31 13:33:32,189 INFO [6] UserService - Start processing  : AddUserToCenter(IList<User> users)
+2018-03-31 13:33:32,387 INFO [6] UserService - End processing  : AddUserToCenter(IList<User> users)
+2018-03-31 13:33:52,791 INFO [6] UserService - Start processing  : AddUserToCenter(IList<User> users)
+2018-03-31 13:34:07,501 ERROR [6] UserService - Error processing AddUserToCenter(IList<User> users): This person is already exists and assigned to one center.,
+2018-03-31 13:34:48,374 INFO [12] UserService - Start processing  : AddUserToCenter(IList<User> users)
+2018-03-31 18:17:52,742 INFO [9] UserService - Start processing  : AddUserToCenter(IList<User> users)
+2018-03-31 18:18:21,571 INFO [9] UserService - End processing  : AddUserToCenter(IList<User> users)

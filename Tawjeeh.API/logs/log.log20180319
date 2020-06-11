@@ -1,0 +1,43 @@
+2018-03-19 12:32:14,514 INFO [6] UserService - Start processing  : Create User
+2018-03-19 12:32:14,614 ERROR [6] UserService - Error processing Create User: Password Generated is invalid., Please contact system administrator.
+2018-03-19 12:32:24,382 INFO [6] UserService - Start processing  : Create User
+2018-03-19 12:32:24,425 ERROR [6] UserService - Error processing Create User: Password Generated is invalid., Please contact system administrator.
+2018-03-19 12:32:32,311 INFO [6] UserService - Start processing  : Create User
+2018-03-19 12:32:53,755 INFO [6] UserService - End processing  : Create User
+2018-03-19 12:36:52,488 INFO [10] UserService - Start processing  : Create User
+2018-03-19 12:37:57,509 INFO [10] UserService - End processing  : Create User
+2018-03-19 12:56:07,481 INFO [6] UserService - Start processing  : Create User
+2018-03-19 12:56:07,513 ERROR [6] UserService - Error processing Create User: User Type is required.,
+2018-03-19 13:00:24,107 INFO [8] UserService - Start processing  : GetUserById
+2018-03-19 13:00:24,188 INFO [8] UserService - End processing  : GetUserById
+2018-03-19 13:01:54,593 INFO [9] UserService - Start processing  : Create User
+2018-03-19 13:01:54,614 ERROR [9] UserService - Error processing Create User: User Type is required.,
+2018-03-19 13:03:12,068 INFO [9] UserService - Start processing  : GetUserById
+2018-03-19 13:03:12,077 INFO [9] UserService - End processing  : GetUserById
+2018-03-19 13:04:02,467 INFO [23] UserService - Start processing  : Create User
+2018-03-19 13:04:02,508 ERROR [23] UserService - Error processing Create User: User Type is required.,
+2018-03-19 13:21:36,015 INFO [7] UserService - Start processing  : Create User
+2018-03-19 13:21:36,059 ERROR [7] UserService - Error processing Create User: Password Generated is invalid., Please contact system administrator.
+2018-03-19 13:21:42,344 INFO [5] UserService - Start processing  : Create User
+2018-03-19 13:21:44,914 INFO [5] UserService - End processing  : Create User
+2018-03-19 13:23:55,949 INFO [8] UserService - Start processing  : Create User
+2018-03-19 13:24:23,579 INFO [8] UserService - End processing  : Create User
+2018-03-19 13:39:48,481 INFO [7] UserService - Start processing  : Create User
+2018-03-19 13:40:06,373 INFO [7] UserService - End processing  : Create User
+2018-03-19 17:07:29,886 INFO [7] UserService - Start processing  : Update User
+2018-03-19 17:07:29,996 INFO [7] UserService - End processing  : Update User
+2018-03-19 17:18:28,612 INFO [6] UserService - Start processing  : GetUserById
+2018-03-19 17:18:28,652 INFO [6] UserService - End processing  : GetUserById
+2018-03-19 17:22:16,758 INFO [5] UserService - Start processing  : Create User
+2018-03-19 17:22:18,940 INFO [5] UserService - End processing  : Create User
+2018-03-19 17:23:25,940 INFO [6] UserService - Start processing  : Update User
+2018-03-19 17:23:25,959 INFO [6] UserService - End processing  : Update User
+2018-03-19 17:23:47,706 INFO [6] UserService - Start processing  : Update User
+2018-03-19 17:23:47,720 INFO [6] UserService - End processing  : Update User
+2018-03-19 20:55:01,004 INFO [8] UserService - Start processing  : GetUserById
+2018-03-19 20:55:01,232 ERROR [8] UserService - Error processing GetUserById: Object reference not set to an instance of an object.
+2018-03-19 20:55:42,863 INFO [8] UserService - Start processing  : GetUserById
+2018-03-19 20:58:02,947 INFO [8] UserService - Start processing  : GetUserById
+2018-03-19 20:58:21,795 INFO [8] UserService - End processing  : GetUserById
+2018-03-19 21:02:12,725 INFO [9] UserService - Start processing  : GetUserById
+2018-03-19 21:02:12,932 INFO [9] UserService - End processing  : GetUserById

@@ -1,0 +1,1152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Edmx Version="3.0" xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <Runtime>
+    <ConceptualModels>
+      <Schema Namespace="Tawjeeh.EntityFramework.Repository" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Article" customannotation:ClrType="Tawjeeh.EntityModel.Article, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LawId" Type="Int64" />
+          <Property Name="ArticleNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="ArticleMultimedias" Relationship="Self.Article_ArticleMultimedias" FromRole="Article_ArticleMultimedias_Source" ToRole="Article_ArticleMultimedias_Target" />
+          <NavigationProperty Name="Decisions" Relationship="Self.Article_Decisions" FromRole="Article_Decisions_Source" ToRole="Article_Decisions_Target" />
+          <NavigationProperty Name="Law" Relationship="Self.Law_Articles" FromRole="Law_Articles_Target" ToRole="Law_Articles_Source" />
+        </EntityType>
+        <EntityType Name="ArticleMultimedia" customannotation:ClrType="Tawjeeh.EntityModel.ArticleMultimedia, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ArticleId" Type="Int64" />
+          <Property Name="LangId" Type="Int32" />
+          <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FileUrl" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="VideoUrl" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="Int32" />
+          <Property Name="CntLikes" Type="Int64" />
+          <Property Name="CntDisLikes" Type="Int64" />
+          <Property Name="CntViews" Type="Int64" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsMobile" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Article" Relationship="Self.Article_ArticleMultimedias" FromRole="Article_ArticleMultimedias_Target" ToRole="Article_ArticleMultimedias_Source" />
+        </EntityType>
+        <EntityType Name="Decision" customannotation:ClrType="Tawjeeh.EntityModel.Decision, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DecisionNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleId" Type="Int64" />
+          <Property Name="Year" Type="Int64" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Article" Relationship="Self.Article_Decisions" FromRole="Article_Decisions_Target" ToRole="Article_Decisions_Source" />
+          <NavigationProperty Name="DecisionMultimedias" Relationship="Self.Decision_DecisionMultimedias" FromRole="Decision_DecisionMultimedias_Source" ToRole="Decision_DecisionMultimedias_Target" />
+        </EntityType>
+        <EntityType Name="DecisionMultimedia" customannotation:ClrType="Tawjeeh.EntityModel.DecisionMultimedia, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DecisionId" Type="Int64" />
+          <Property Name="LangId" Type="Int32" />
+          <Property Name="FileName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="VideoUrl" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FileUrl" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="Int32" />
+          <Property Name="CntLikes" Type="Int64" />
+          <Property Name="CntDisLikes" Type="Int64" />
+          <Property Name="CntViews" Type="Int64" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsMobile" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Decision" Relationship="Self.Decision_DecisionMultimedias" FromRole="Decision_DecisionMultimedias_Target" ToRole="Decision_DecisionMultimedias_Source" />
+        </EntityType>
+        <EntityType Name="Law" customannotation:ClrType="Tawjeeh.EntityModel.Law, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Articles" Relationship="Self.Law_Articles" FromRole="Law_Articles_Source" ToRole="Law_Articles_Target" />
+          <NavigationProperty Name="LawTranslations" Relationship="Self.Law_LawTranslations" FromRole="Law_LawTranslations_Source" ToRole="Law_LawTranslations_Target" />
+        </EntityType>
+        <EntityType Name="LawTrans" customannotation:ClrType="Tawjeeh.EntityModel.LawTrans, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LangId" Type="Int32" />
+          <Property Name="LawId" Type="Int64" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Law" Relationship="Self.Law_LawTranslations" FromRole="Law_LawTranslations_Target" ToRole="Law_LawTranslations_Source" />
+        </EntityType>
+        <EntityType Name="ArticleTrans" customannotation:ClrType="Tawjeeh.EntityModel.ArticleTrans, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ArticleId" Type="Int64" />
+          <Property Name="ArticleNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LangId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Article" Relationship="Self.ArticleTrans_Article" FromRole="ArticleTrans_Article_Source" ToRole="ArticleTrans_Article_Target" />
+        </EntityType>
+        <EntityType Name="Centers" customannotation:ClrType="Tawjeeh.EntityModel.Centers, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LocationAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EmiratesId" Type="Int64" />
+          <Property Name="TradeLicense" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TradeLicenseExpiryDate" Type="DateTime" />
+          <Property Name="FaxNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="CenterTrans" Relationship="Self.Centers_CenterTrans" FromRole="Centers_CenterTrans_Source" ToRole="Centers_CenterTrans_Target" />
+          <NavigationProperty Name="Contacts" Relationship="Self.Centers_Contacts" FromRole="Centers_Contacts_Source" ToRole="Centers_Contacts_Target" />
+          <NavigationProperty Name="Emirates" Relationship="Self.Emirates_Centers" FromRole="Emirates_Centers_Target" ToRole="Emirates_Centers_Source" />
+        </EntityType>
+        <EntityType Name="CenterTrans" customannotation:ClrType="Tawjeeh.EntityModel.CenterTrans, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LocationAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CenterId" Type="Int64" />
+          <Property Name="LangId" Type="Int32" />
+          <Property Name="EmiratesId" Type="Int64" />
+          <Property Name="TradeLicense" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TradeLicenseExpiryDate" Type="DateTime" />
+          <Property Name="FaxNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WebSite" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="Double" />
+          <Property Name="Latitude" Type="Double" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Centers" Relationship="Self.Centers_CenterTrans" FromRole="Centers_CenterTrans_Target" ToRole="Centers_CenterTrans_Source" />
+        </EntityType>
+        <EntityType Name="CenterContacts" customannotation:ClrType="Tawjeeh.EntityModel.CenterContacts, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CenterId" Type="Int64" />
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="ContactTypeId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Centers" Relationship="Self.Centers_Contacts" FromRole="Centers_Contacts_Target" ToRole="Centers_Contacts_Source" />
+          <NavigationProperty Name="User" Relationship="Self.CenterContacts_User" FromRole="CenterContacts_User_Source" ToRole="CenterContacts_User_Target" />
+        </EntityType>
+        <EntityType Name="User" customannotation:ClrType="Tawjeeh.EntityModel.User, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserTypeId" Type="Int64" />
+          <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="OfficeNo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="JobTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsOTP" Type="Boolean" />
+          <Property Name="OTP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="LangId" Type="Int32" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="CompanyId" Type="Int64" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+        </EntityType>
+        <EntityType Name="Emirates" customannotation:ClrType="Tawjeeh.EntityModel.Emirates, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int64" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int64" />
+          <NavigationProperty Name="Centers" Relationship="Self.Emirates_Centers" FromRole="Emirates_Centers_Source" ToRole="Emirates_Centers_Target" />
+        </EntityType>
+        <EntityType Name="UserType" customannotation:ClrType="Tawjeeh.EntityModel.UserType, Tawjeeh.EntityModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="CreatedOn" Type="DateTime" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="UpdatedOn" Type="DateTime" />
+          <Property Name="UpdatedBy" Type="Int32" />
+        </EntityType>
+        <Association Name="Article_ArticleMultimedias">
+          <End Role="Article_ArticleMultimedias_Source" Type="Self.Article" Multiplicity="0..1" />
+          <End Role="Article_ArticleMultimedias_Target" Type="Self.ArticleMultimedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article_ArticleMultimedias_Source">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article_ArticleMultimedias_Target">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Decision_DecisionMultimedias">
+          <End Role="Decision_DecisionMultimedias_Source" Type="Self.Decision" Multiplicity="0..1" />
+          <End Role="Decision_DecisionMultimedias_Target" Type="Self.DecisionMultimedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Decision_DecisionMultimedias_Source">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Decision_DecisionMultimedias_Target">
+              <PropertyRef Name="DecisionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Article_Decisions">
+          <End Role="Article_Decisions_Source" Type="Self.Article" Multiplicity="0..1" />
+          <End Role="Article_Decisions_Target" Type="Self.Decision" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article_Decisions_Source">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article_Decisions_Target">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Law_Articles">
+          <End Role="Law_Articles_Source" Type="Self.Law" Multiplicity="0..1" />
+          <End Role="Law_Articles_Target" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law_Articles_Source">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Law_Articles_Target">
+              <PropertyRef Name="LawId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Law_LawTranslations">
+          <End Role="Law_LawTranslations_Source" Type="Self.Law" Multiplicity="0..1" />
+          <End Role="Law_LawTranslations_Target" Type="Self.LawTrans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law_LawTranslations_Source">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Law_LawTranslations_Target">
+              <PropertyRef Name="LawId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ArticleTrans_Article">
+          <End Role="ArticleTrans_Article_Source" Type="Self.ArticleTrans" Multiplicity="*" />
+          <End Role="ArticleTrans_Article_Target" Type="Self.Article" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ArticleTrans_Article_Target">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleTrans_Article_Source">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Centers_CenterTrans">
+          <End Role="Centers_CenterTrans_Source" Type="Self.Centers" Multiplicity="0..1" />
+          <End Role="Centers_CenterTrans_Target" Type="Self.CenterTrans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Centers_CenterTrans_Source">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Centers_CenterTrans_Target">
+              <PropertyRef Name="CenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CenterContacts_User">
+          <End Role="CenterContacts_User_Source" Type="Self.CenterContacts" Multiplicity="*" />
+          <End Role="CenterContacts_User_Target" Type="Self.User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <ReferentialConstraint>
+            <Principal Role="CenterContacts_User_Target">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CenterContacts_User_Source">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Centers_Contacts">
+          <End Role="Centers_Contacts_Source" Type="Self.Centers" Multiplicity="0..1" />
+          <End Role="Centers_Contacts_Target" Type="Self.CenterContacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Centers_Contacts_Source">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Centers_Contacts_Target">
+              <PropertyRef Name="CenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Emirates_Centers">
+          <End Role="Emirates_Centers_Source" Type="Self.Emirates" Multiplicity="0..1" />
+          <End Role="Emirates_Centers_Target" Type="Self.Centers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Emirates_Centers_Source">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Emirates_Centers_Target">
+              <PropertyRef Name="EmiratesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TawjeehContext" customannotation:UseClrTypes="true">
+          <EntitySet Name="Article" EntityType="Self.Article" />
+          <EntitySet Name="ArticleMultimedia" EntityType="Self.ArticleMultimedia" />
+          <EntitySet Name="Decision" EntityType="Self.Decision" />
+          <EntitySet Name="DecisionMultimedia" EntityType="Self.DecisionMultimedia" />
+          <EntitySet Name="Law" EntityType="Self.Law" />
+          <EntitySet Name="LawTrans" EntityType="Self.LawTrans" />
+          <EntitySet Name="ArticleTrans" EntityType="Self.ArticleTrans" />
+          <EntitySet Name="Centers" EntityType="Self.Centers" />
+          <EntitySet Name="CenterTrans" EntityType="Self.CenterTrans" />
+          <EntitySet Name="CenterContacts" EntityType="Self.CenterContacts" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Emirates" EntityType="Self.Emirates" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+          <AssociationSet Name="Article_ArticleMultimedias" Association="Self.Article_ArticleMultimedias">
+            <End Role="Article_ArticleMultimedias_Source" EntitySet="Article" />
+            <End Role="Article_ArticleMultimedias_Target" EntitySet="ArticleMultimedia" />
+          </AssociationSet>
+          <AssociationSet Name="Decision_DecisionMultimedias" Association="Self.Decision_DecisionMultimedias">
+            <End Role="Decision_DecisionMultimedias_Source" EntitySet="Decision" />
+            <End Role="Decision_DecisionMultimedias_Target" EntitySet="DecisionMultimedia" />
+          </AssociationSet>
+          <AssociationSet Name="Article_Decisions" Association="Self.Article_Decisions">
+            <End Role="Article_Decisions_Source" EntitySet="Article" />
+            <End Role="Article_Decisions_Target" EntitySet="Decision" />
+          </AssociationSet>
+          <AssociationSet Name="Law_Articles" Association="Self.Law_Articles">
+            <End Role="Law_Articles_Source" EntitySet="Law" />
+            <End Role="Law_Articles_Target" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="Law_LawTranslations" Association="Self.Law_LawTranslations">
+            <End Role="Law_LawTranslations_Source" EntitySet="Law" />
+            <End Role="Law_LawTranslations_Target" EntitySet="LawTrans" />
+          </AssociationSet>
+          <AssociationSet Name="ArticleTrans_Article" Association="Self.ArticleTrans_Article">
+            <End Role="ArticleTrans_Article_Source" EntitySet="ArticleTrans" />
+            <End Role="ArticleTrans_Article_Target" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="Centers_CenterTrans" Association="Self.Centers_CenterTrans">
+            <End Role="Centers_CenterTrans_Source" EntitySet="Centers" />
+            <End Role="Centers_CenterTrans_Target" EntitySet="CenterTrans" />
+          </AssociationSet>
+          <AssociationSet Name="CenterContacts_User" Association="Self.CenterContacts_User">
+            <End Role="CenterContacts_User_Source" EntitySet="CenterContacts" />
+            <End Role="CenterContacts_User_Target" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="Centers_Contacts" Association="Self.Centers_Contacts">
+            <End Role="Centers_Contacts_Source" EntitySet="Centers" />
+            <End Role="Centers_Contacts_Target" EntitySet="CenterContacts" />
+          </AssociationSet>
+          <AssociationSet Name="Emirates_Centers" Association="Self.Emirates_Centers">
+            <End Role="Emirates_Centers_Source" EntitySet="Emirates" />
+            <End Role="Emirates_Centers_Target" EntitySet="Centers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </ConceptualModels>
+    <Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CodeFirstDatabase" CdmEntityContainer="TawjeehContext">
+          <EntitySetMapping Name="Article">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.Article">
+              <MappingFragment StoreEntitySet="Article">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LawId" ColumnName="LawId" />
+                <ScalarProperty Name="ArticleNo" ColumnName="ArticleNo" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleMultimedia">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.ArticleMultimedia">
+              <MappingFragment StoreEntitySet="ArticleMultimedia">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="LangId" ColumnName="LangId" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="FileUrl" ColumnName="FileUrl" />
+                <ScalarProperty Name="VideoUrl" ColumnName="VideoUrl" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="CntLikes" ColumnName="CntLikes" />
+                <ScalarProperty Name="CntDisLikes" ColumnName="CntDisLikes" />
+                <ScalarProperty Name="CntViews" ColumnName="CntViews" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Decision">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.Decision">
+              <MappingFragment StoreEntitySet="Decision">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DecisionNo" ColumnName="DecisionNo" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DecisionMultimedia">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.DecisionMultimedia">
+              <MappingFragment StoreEntitySet="DecisionMultimedia">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="DecisionId" ColumnName="DecisionId" />
+                <ScalarProperty Name="LangId" ColumnName="LangId" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="VideoUrl" ColumnName="VideoUrl" />
+                <ScalarProperty Name="FileUrl" ColumnName="FileUrl" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="CntLikes" ColumnName="CntLikes" />
+                <ScalarProperty Name="CntDisLikes" ColumnName="CntDisLikes" />
+                <ScalarProperty Name="CntViews" ColumnName="CntViews" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsMobile" ColumnName="IsMobile" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Law">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.Law">
+              <MappingFragment StoreEntitySet="Law">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LawTrans">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.LawTrans">
+              <MappingFragment StoreEntitySet="LawTrans">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="LangId" ColumnName="LangId" />
+                <ScalarProperty Name="LawId" ColumnName="LawId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ArticleTrans">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.ArticleTrans">
+              <MappingFragment StoreEntitySet="ArticleTrans">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ArticleId" ColumnName="ArticleId" />
+                <ScalarProperty Name="ArticleNo" ColumnName="ArticleNo" />
+                <ScalarProperty Name="LangId" ColumnName="LangId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Centers">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.Centers">
+              <MappingFragment StoreEntitySet="Centers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LocationAddress" ColumnName="LocationAddress" />
+                <ScalarProperty Name="EmiratesId" ColumnName="EmiratesId" />
+                <ScalarProperty Name="TradeLicense" ColumnName="TradeLicense" />
+                <ScalarProperty Name="TradeLicenseExpiryDate" ColumnName="TradeLicenseExpiryDate" />
+                <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CenterTrans">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.CenterTrans">
+              <MappingFragment StoreEntitySet="CenterTrans">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LocationAddress" ColumnName="LocationAddress" />
+                <ScalarProperty Name="CenterId" ColumnName="CenterId" />
+                <ScalarProperty Name="LangId" ColumnName="LangId" />
+                <ScalarProperty Name="EmiratesId" ColumnName="EmiratesId" />
+                <ScalarProperty Name="TradeLicense" ColumnName="TradeLicense" />
+                <ScalarProperty Name="TradeLicenseExpiryDate" ColumnName="TradeLicenseExpiryDate" />
+                <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+                <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CenterContacts">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.CenterContacts">
+              <MappingFragment StoreEntitySet="CenterContacts">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CenterId" ColumnName="CenterId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ContactTypeId" ColumnName="ContactTypeId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserTypeId" ColumnName="UserTypeId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="OfficeNo" ColumnName="OfficeNo" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IsOTP" ColumnName="IsOTP" />
+                <ScalarProperty Name="OTP" ColumnName="OTP" />
+                <ScalarProperty Name="LangId" ColumnName="LangId" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Emirates">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.Emirates">
+              <MappingFragment StoreEntitySet="Emirates">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="Tawjeeh.EntityFramework.Repository.UserType">
+              <MappingFragment StoreEntitySet="UserType">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </Mappings>
+    <StorageModels>
+      <Schema Namespace="CodeFirstDatabaseSchema" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Article" customannotation:DynamicFilter_Article_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="ntext" Nullable="true" />
+          <Property Name="LawId" Type="bigint" customannotation:Index="{ Name: IX_LawId, Order: 0 }" Nullable="true" />
+          <Property Name="ArticleNo" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="ArticleMultimedia" customannotation:DynamicFilter_ArticleMultimedia_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ArticleId" Type="bigint" customannotation:Index="{ Name: IX_ArticleId, Order: 0 }" Nullable="true" />
+          <Property Name="LangId" Type="int" Nullable="true" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="150" Nullable="true" />
+          <Property Name="FileUrl" Type="nvarchar" MaxLength="150" Nullable="true" />
+          <Property Name="VideoUrl" Type="nvarchar" MaxLength="150" Nullable="true" />
+          <Property Name="FileType" Type="int" Nullable="true" />
+          <Property Name="CntLikes" Type="bigint" Nullable="true" />
+          <Property Name="CntDisLikes" Type="bigint" Nullable="true" />
+          <Property Name="CntViews" Type="bigint" Nullable="true" />
+          <Property Name="Description" Type="ntext" Nullable="true" />
+          <Property Name="IsMobile" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Decision" customannotation:DynamicFilter_Decision_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="ntext" Nullable="true" />
+          <Property Name="DecisionNo" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="ArticleId" Type="bigint" customannotation:Index="{ Name: IX_ArticleId, Order: 0 }" Nullable="true" />
+          <Property Name="Year" Type="bigint" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="DecisionMultimedia" customannotation:DynamicFilter_DecisionMultimedia_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DecisionId" Type="bigint" customannotation:Index="{ Name: IX_DecisionId, Order: 0 }" Nullable="true" />
+          <Property Name="LangId" Type="int" Nullable="true" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="150" Nullable="true" />
+          <Property Name="VideoUrl" Type="nvarchar" MaxLength="150" Nullable="true" />
+          <Property Name="FileUrl" Type="nvarchar" MaxLength="150" Nullable="true" />
+          <Property Name="FileType" Type="int" Nullable="true" />
+          <Property Name="CntLikes" Type="bigint" Nullable="true" />
+          <Property Name="CntDisLikes" Type="bigint" Nullable="true" />
+          <Property Name="CntViews" Type="bigint" Nullable="true" />
+          <Property Name="Description" Type="ntext" Nullable="true" />
+          <Property Name="IsMobile" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Law" customannotation:DynamicFilter_Law_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="ntext" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="LawTrans" customannotation:DynamicFilter_LawTrans_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="ntext" Nullable="true" />
+          <Property Name="LangId" Type="int" Nullable="true" />
+          <Property Name="LawId" Type="bigint" customannotation:Index="{ Name: IX_LawId, Order: 0 }" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:09" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="ArticleTrans" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="ntext" Nullable="true" />
+          <Property Name="ArticleId" Type="bigint" customannotation:Index="{ Name: IX_ArticleId, Order: 0 }" Nullable="true" />
+          <Property Name="ArticleNo" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="LangId" Type="int" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Centers" customannotation:DynamicFilter_Centers_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="LocationAddress" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="EmiratesId" Type="bigint" customannotation:Index="{ Name: IX_EmiratesId, Order: 0 }" Nullable="true" />
+          <Property Name="TradeLicense" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="TradeLicenseExpiryDate" Type="datetime" Nullable="true" />
+          <Property Name="FaxNo" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="WebSite" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="Longitude" Type="float" Nullable="true" />
+          <Property Name="Latitude" Type="float" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="CenterTrans" customannotation:DynamicFilter_CenterTrans_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="LocationAddress" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="CenterId" Type="bigint" customannotation:Index="{ Name: IX_CenterId, Order: 0 }" Nullable="true" />
+          <Property Name="LangId" Type="int" Nullable="true" />
+          <Property Name="EmiratesId" Type="bigint" Nullable="true" />
+          <Property Name="TradeLicense" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="TradeLicenseExpiryDate" Type="datetime" Nullable="true" />
+          <Property Name="FaxNo" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="PhoneNo" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="WebSite" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="true" />
+          <Property Name="Longitude" Type="float" Nullable="true" />
+          <Property Name="Latitude" Type="float" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="CenterContacts" customannotation:DynamicFilter_CenterContacts_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CenterId" Type="bigint" customannotation:Index="{ Name: IX_CenterId, Order: 0 }" Nullable="true" />
+          <Property Name="UserId" Type="bigint" customannotation:Index="{ Name: IX_UserId, Order: 0 }" Nullable="false" />
+          <Property Name="ContactTypeId" Type="int" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="User" customannotation:DynamicFilter_User_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserTypeId" Type="bigint" Nullable="true" />
+          <Property Name="UserName" Type="varchar" MaxLength="100" Nullable="true" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="OfficeNo" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="Department" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="JobTitle" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="15" Nullable="true" />
+          <Property Name="Photo" Type="nvarchar" MaxLength="150" Nullable="true" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="true" />
+          <Property Name="IsOTP" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="OTP" Type="nvarchar" MaxLength="10" Nullable="true" />
+          <Property Name="LangId" Type="int" Nullable="true" />
+          <Property Name="CountryId" Type="int" Nullable="true" />
+          <Property Name="CompanyId" Type="bigint" Nullable="true" />
+          <Property Name="Gender" Type="nvarchar" customannotation:Default="Male" MaxLength="10" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:09" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="Emirates" customannotation:DynamicFilter_Emirates_IsDisabled="EntityFramework.DynamicFilters.DynamicFilterDefinition" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:08" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="bigint" Nullable="true" />
+        </EntityType>
+        <EntityType Name="UserType" customannotation:Index="{ }">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="ntext" Nullable="true" />
+          <Property Name="IsActive" Type="bit" customannotation:Default="1" Nullable="true" />
+          <Property Name="IsDeleted" Type="bit" customannotation:Default="0" Nullable="true" />
+          <Property Name="CreatedOn" Type="datetime" customannotation:Default="16/05/2018 21:29:09" Nullable="true" />
+          <Property Name="CreatedBy" Type="bigint" Nullable="true" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="true" />
+          <Property Name="UpdatedBy" Type="int" Nullable="true" />
+        </EntityType>
+        <Association Name="Article_ArticleMultimedias">
+          <End Role="Article" Type="Self.Article" Multiplicity="0..1" />
+          <End Role="ArticleMultimedia" Type="Self.ArticleMultimedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleMultimedia">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Decision_DecisionMultimedias">
+          <End Role="Decision" Type="Self.Decision" Multiplicity="0..1" />
+          <End Role="DecisionMultimedia" Type="Self.DecisionMultimedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Decision">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DecisionMultimedia">
+              <PropertyRef Name="DecisionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Article_Decisions">
+          <End Role="Article" Type="Self.Article" Multiplicity="0..1" />
+          <End Role="Decision" Type="Self.Decision" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Decision">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Law_Articles">
+          <End Role="Law" Type="Self.Law" Multiplicity="0..1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="LawId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Law_LawTranslations">
+          <End Role="Law" Type="Self.Law" Multiplicity="0..1" />
+          <End Role="LawTrans" Type="Self.LawTrans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Law">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LawTrans">
+              <PropertyRef Name="LawId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ArticleTrans_Article">
+          <End Role="Article" Type="Self.Article" Multiplicity="0..1" />
+          <End Role="ArticleTrans" Type="Self.ArticleTrans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ArticleTrans">
+              <PropertyRef Name="ArticleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Centers_CenterTrans">
+          <End Role="Centers" Type="Self.Centers" Multiplicity="0..1" />
+          <End Role="CenterTrans" Type="Self.CenterTrans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Centers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CenterTrans">
+              <PropertyRef Name="CenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CenterContacts_User">
+          <End Role="User" Type="Self.User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CenterContacts" Type="Self.CenterContacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CenterContacts">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Centers_Contacts">
+          <End Role="Centers" Type="Self.Centers" Multiplicity="0..1" />
+          <End Role="CenterContacts" Type="Self.CenterContacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Centers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CenterContacts">
+              <PropertyRef Name="CenterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Emirates_Centers">
+          <End Role="Emirates" Type="Self.Emirates" Multiplicity="0..1" />
+          <End Role="Centers" Type="Self.Centers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Emirates">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Centers">
+              <PropertyRef Name="EmiratesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CodeFirstDatabase">
+          <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" Table="tblArticle" />
+          <EntitySet Name="ArticleMultimedia" EntityType="Self.ArticleMultimedia" Schema="dbo" Table="tblArticleMultimedia" />
+          <EntitySet Name="Decision" EntityType="Self.Decision" Schema="dbo" Table="tblDecision" />
+          <EntitySet Name="DecisionMultimedia" EntityType="Self.DecisionMultimedia" Schema="dbo" Table="tblDecisionMultimedia" />
+          <EntitySet Name="Law" EntityType="Self.Law" Schema="dbo" Table="tblLaw" />
+          <EntitySet Name="LawTrans" EntityType="Self.LawTrans" Schema="dbo" Table="tblLawTrans" />
+          <EntitySet Name="ArticleTrans" EntityType="Self.ArticleTrans" Schema="dbo" Table="tblArticleTrans" />
+          <EntitySet Name="Centers" EntityType="Self.Centers" Schema="dbo" Table="tblCenters" />
+          <EntitySet Name="CenterTrans" EntityType="Self.CenterTrans" Schema="dbo" Table="tblCenterTrans" />
+          <EntitySet Name="CenterContacts" EntityType="Self.CenterContacts" Schema="dbo" Table="tblCenterContacts" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" Table="tblUser" />
+          <EntitySet Name="Emirates" EntityType="Self.Emirates" Schema="dbo" Table="tblEmirates" />
+          <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" Table="tblUserType" />
+          <AssociationSet Name="Article_ArticleMultimedias" Association="Self.Article_ArticleMultimedias">
+            <End Role="Article" EntitySet="Article" />
+            <End Role="ArticleMultimedia" EntitySet="ArticleMultimedia" />
+          </AssociationSet>
+          <AssociationSet Name="Decision_DecisionMultimedias" Association="Self.Decision_DecisionMultimedias">
+            <End Role="Decision" EntitySet="Decision" />
+            <End Role="DecisionMultimedia" EntitySet="DecisionMultimedia" />
+          </AssociationSet>
+          <AssociationSet Name="Article_Decisions" Association="Self.Article_Decisions">
+            <End Role="Article" EntitySet="Article" />
+            <End Role="Decision" EntitySet="Decision" />
+          </AssociationSet>
+          <AssociationSet Name="Law_Articles" Association="Self.Law_Articles">
+            <End Role="Law" EntitySet="Law" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="Law_LawTranslations" Association="Self.Law_LawTranslations">
+            <End Role="Law" EntitySet="Law" />
+            <End Role="LawTrans" EntitySet="LawTrans" />
+          </AssociationSet>
+          <AssociationSet Name="ArticleTrans_Article" Association="Self.ArticleTrans_Article">
+            <End Role="Article" EntitySet="Article" />
+            <End Role="ArticleTrans" EntitySet="ArticleTrans" />
+          </AssociationSet>
+          <AssociationSet Name="Centers_CenterTrans" Association="Self.Centers_CenterTrans">
+            <End Role="Centers" EntitySet="Centers" />
+            <End Role="CenterTrans" EntitySet="CenterTrans" />
+          </AssociationSet>
+          <AssociationSet Name="CenterContacts_User" Association="Self.CenterContacts_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="CenterContacts" EntitySet="CenterContacts" />
+          </AssociationSet>
+          <AssociationSet Name="Centers_Contacts" Association="Self.Centers_Contacts">
+            <End Role="Centers" EntitySet="Centers" />
+            <End Role="CenterContacts" EntitySet="CenterContacts" />
+          </AssociationSet>
+          <AssociationSet Name="Emirates_Centers" Association="Self.Emirates_Centers">
+            <End Role="Emirates" EntitySet="Emirates" />
+            <End Role="Centers" EntitySet="Centers" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </StorageModels>
+  </Runtime>
+  <Designer>
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="ProcessDependentTemplatesOnSave" Value="False" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <Diagrams />
+  </Designer>
+</Edmx>

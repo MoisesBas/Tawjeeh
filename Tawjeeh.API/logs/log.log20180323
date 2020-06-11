@@ -1,0 +1,10 @@
+2018-03-23 18:04:16,540 INFO [5] UserService - Start processing  : Create User
+2018-03-23 18:04:16,671 INFO [5] UserService - End processing  : Create User
+2018-03-23 18:12:00,290 INFO [8] UserService - Start processing  : Create User
+2018-03-23 18:12:00,417 INFO [8] UserService - End processing  : Create User
+2018-03-23 19:31:09,033 INFO [5] UserService - Start processing  : Update User
+2018-03-23 19:31:09,253 INFO [5] UserService - End processing  : Update User
+2018-03-23 19:32:10,568 INFO [5] UserService - Start processing  : Update User
+2018-03-23 19:32:10,587 INFO [5] UserService - End processing  : Update User
+2018-03-23 22:30:51,005 INFO [6] UserService - Start processing  : GetUserById
+2018-03-23 22:30:51,039 INFO [6] UserService - End processing  : GetUserById
